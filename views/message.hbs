@@ -1,0 +1,31 @@
+
+
+    <div class="col-md-offset-3 col-md-6" id="box">
+      <h2>Notice Board!</h2>
+      <hr>
+{{# each infos}}
+
+
+                   <div class="panel panel-default">
+
+                      <div class="panel-heading">
+                        {{# each this}}
+                        <h3 class="panel-title">{{this.title}}</h3>
+                         {{/each}}
+
+                         <a href="/update">Edit</a>
+                         <a href="/delete/{{this.id}}">Delete</a>
+                      </div>
+
+                      <div class="panel-body">
+                        {{# each this}}
+                      {{this.message}}
+                         {{/each}}
+                      </div>
+
+                    </div>
+
+
+{{/each}}
+
+     </div>
